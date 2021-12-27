@@ -1,0 +1,200 @@
+// import React, { useState } from "react";
+// import ToDoList from "./ToDoList";
+// import "./index.css";
+
+// import ToDoList from "./ToDoList";
+
+// const App = () => {
+
+//   var [inputList, setinputList] = useState("");
+  
+//   const InputEvent = (event) => {
+//     setinputList(event.target.value);
+//   };
+
+//   const [Items, setItems] = useState([]);
+
+//   const task = () => {
+//     setItems((oldItems) => {
+//       return [...oldItems, inputList];
+//     });
+//     setinputList("");
+//   };
+
+//   const deleteItems = (id) => {
+//     alert("Deleted");
+//     setItems((oldItems) => {
+//       return oldItems.filter((arrElem, index) => {
+//         return index !== id;
+//       });
+//     });
+//   };
+
+//   return (
+//     <>
+//       <div className="container">
+//       <br />
+//         <h1 className="todo">To Do List</h1>
+//         <br />
+//         <br />
+//         <input className="input" type="text" placeholder="Enter task to remember." onChange={InputEvent} value={inputList} />
+//         <button className="hovered_button" onClick={task}> + </button>
+//         <br />
+//         <br />
+//         <ol style={{ backgroundColor: "white", listStyleType: "none" }}>
+//           {Items.map((itemval, index) => {
+//             return (
+//               <ToDoList
+//                 key={index}
+//                 id={index}
+//                 text={itemval}
+//                 onSelect={deleteItems}
+//               />
+//             );
+//           })}
+//         </ol>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// index.css
+// * {
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+//   background-color: #3bf1f1;
+//   color: purple;
+// }
+
+// .container {
+//   width: 20rem;
+//   height: 30rem;
+//   border-radius: 5%;
+//   background-color: white;
+//   margin: 6% auto;
+// }
+
+// .todo {
+//   color: white;
+//   text-align: center;
+//   background-color: purple;
+// }
+
+// .input {
+//   border: none;
+//   border-bottom: 2px solid black;
+//   background-color: white;
+//   width: 12rem;
+//   height: 2rem;
+//   margin-left:5% ;
+// }
+
+// .hovered_button {
+//   border-radius: 50%;
+//   color: white;
+//   background-color: purple;
+//   height: 3rem;
+//   width: 3rem;
+//   font-size: 250%;
+//   border: none;
+//   margin-left: 8%;
+// }
+
+// .hovered_button:hover {
+//   cursor: pointer;
+//   background-color: green;
+// }
+
+// .hovered_icon {
+//   background-color: purple;
+//   border-radius: 50%;
+//   color: white;
+//   padding-top: 7px;
+//   padding-left: 8px;
+//   padding-right: 5px;
+// }
+
+// .hovered_icon:hover {
+//   background-color: red;
+//   color: white;
+//   cursor: pointer;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // ToDoList.jsx
+// import React from "react";
+// import './index.css'
+
+// const ToDoList = (props) => {
+//   return (
+//     <>
+//       <li style={{ backgroundColor: "white", fontSize: "2rem", marginLeft: "13%", marginTop: "3%"}}>
+//        <i className="hovered_icon" onClick={()=>{
+//            props.onSelect(props.id);
+//        }}>* </i> {props.text}
+//       </li>
+//     </>
+//   );
+// };
+
+// export default ToDoList;

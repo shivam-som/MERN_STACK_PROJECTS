@@ -1,0 +1,463 @@
+// // import React from "react";
+// // import ReactDOM from "react-dom";
+// // import Card from "./Cards";
+// // import "./index.css";
+// // import Sdata from "./Sdata";
+
+// // // console.log(Sdata[0]);
+// // // this print the first data element of the Array
+// // // console.log(Sdata[0].sname);
+// // // this prints the sname from the first element of the Array
+
+// // ReactDOM.render(
+// //   <>
+// //     <h1 className="heading_style"> List of top 5 Netflix series in 2020 </h1>
+
+// //     {/* creating custom attributes(like imgsrc,title,sname,link in below line) and always remember that
+// //     the custom attributes name must not be a predefined variable is called props("properties")  */}
+// //     <Card
+// //         // imgsrc="https://wallpapercave.com/wp/wp4056410.jpg"
+// //         // title=" A Netflix Original Series "
+// //         // sname=" DARK "
+// //         // link="https://www.netflix.com/in/title/80990668?source=35"
+
+// //     //   instead of the above code, we are using below code because it is less complex
+// //     //   and easy to understand and it is getting from Sdata.jsx
+// //       imgsrc={Sdata[0].imgsrc}
+// //       title={Sdata[0].title}
+// //       sname={Sdata[0].sname}
+// //       link={Sdata[0].link}
+// //       // Always use ditinct name for custom attributes(props) like: not use className as an custom attibute's name
+// //     />
+
+// //     <Card
+// //       imgsrc={Sdata[1].imgsrc}
+// //       title={Sdata[1].title}
+// //       sname={Sdata[1].sname}
+// //       link={Sdata[1].link}
+// //     />
+// //     <Card
+// //       imgsrc={Sdata[2].imgsrc}
+// //       title={Sdata[2].title}
+// //       sname={Sdata[2].sname}
+// //       link={Sdata[2].link}
+// //     />
+// //     <Card
+// //       imgsrc={Sdata[3].imgsrc}
+// //       title={Sdata[3].title}
+// //       sname={Sdata[3].sname}
+// //       link={Sdata[3].link}
+// //     />
+// //     <Card
+// //       imgsrc={Sdata[4].imgsrc}
+// //       title={Sdata[4].title}
+// //       sname={Sdata[4].sname}
+// //       link={Sdata[4].link}
+// //     />
+// //   </>,
+// //   document.getElementById("root")
+// // );
+
+// // ArrayMap function
+// // now using JS ArrayMap and Fat Arrow method in this above code
+// // so not to disturb that code that's whywe copy it here
+
+// // Map method needs a unique KeyboardEvent. Keys are necessary to improve performance of your react app.
+// // array.map(function(currentValue, index, arr), thisValue);
+// // function ke andr function aur fir uske bhi andr function ise khte hai functional programming
+// // To use Js inside render method, then use it in curly braces like we write {Sdata.map(ncard)} below
+// // This is the map function
+
+// // import React from "react";
+// // import ReactDOM from "react-dom";
+// // import Card from "./Cards";
+// // import "./index.css";
+// // import Sdata from "./Sdata";
+
+// // function ncard(val){
+// //   return(
+// //     <Card
+// //       imgsrc={val.imgsrc}
+// //       title={val.title}
+// //       sname={val.sname}
+// //       link={val.links}
+// //     />
+// //   );
+// // }
+// // ReactDOM.render(
+// //   <>
+// //     <h1 className="heading_style"> List of top 5 Netflix series in 2020 </h1>
+// //     {Sdata.map(ncard)}
+// //   </>,
+// //   document.getElementById("root")
+// // );
+
+
+
+
+// // Fat Arrow Function
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import Card from "./Cards";
+// import "./index.css";
+// import Sdata from "./Sdata";
+
+// // function ncard(val) {
+// //   return (
+// //     <Card
+// //       imgsrc={val.imgsrc}
+// //       title={val.title}
+// //       sname={val.sname}
+// //       link={val.links}
+// //     />
+// //   );
+// // }
+// ReactDOM.render(
+//   <>
+//     <h1 className="heading_style"> List of top 5 Netflix series in 2020 </h1>
+//     {Sdata.map((val)=> {
+//       return (
+//         <Card
+//           key = {val.id}
+//           imgsrc = {val.imgsrc}
+//           title = {val.title}
+//           sname = {val.sname}
+//           link = {val.links}
+//         />
+//       );
+//     })}
+//   </>,
+//   document.getElementById("root")
+// );
+
+
+// // Fat Function Examples
+// // function normalFunction(vinod){
+// // }
+// // const fatarrowFunction =(vinod) => {
+// // }
+
+
+// // function normalFunction(a,b){
+// //   return a+b;
+// // }
+// // const fatarrowFunction =(a,b) => {
+// //   return a+b;
+// // }
+
+
+// // function normalFunction(a,b){
+// //   return a+b;
+// // }
+// // const fatarrowFunction =(a,b) => a+b;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Cards.jsx
+// import React from 'react';
+
+// // creating custom Component with props (custom attributes)
+// // so, now after declaring the custom attributes in the card tag below then we have 
+// // to specify them in the below line Card declartion
+// function Cards(props) {
+//     // props is an object that has all the custom attributes that have been assed to it
+//     // and to access that attributes we have to call them using props.attributeName
+//     // console.log(props); 
+//     // it is used to show that props is an object that containe all custom attributes
+//   return (
+//     <>
+//       <div className="cards">
+//         <div className="card">
+//           {/* <img src="" alt="myPic" className="card_img" /> */}
+//           {/* now we use imgsrc props of the card Component so, to use that we have to use js syntax like*/}
+//           <img src={props.imgsrc} alt="myPic" className="card_img" />
+//           <div className="card_info">
+//             <span className="card_category">{props.title}</span>
+//             <h3 className="card_title"> {props.sname} </h3>
+//             <a href={props.link} target="_blank">
+//               <button> Watch Now </button>
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Cards;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Sdata.jsx
+// const Sdata = [
+//   {
+//       id: 1,
+//       sname : "DARK",
+//       imgsrc : "https://wallpapercave.com/wp/wp4056410.jpg",
+//       title:"Netflix Original Series",
+//       links:"https://www.netflix.com/in/title/80990668?source=35",
+//   },
+//   {
+//       id: 2,
+//       sname : "MONEY HEIST",
+//       imgsrc : "https://occ-0-4346-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSIveZZlnOhfDnhLQzV9dSpkQZGxZpo8XyL-zvMurmkBXQGVLHSdi5ceEEg1jKFsvrZbUMYsRTMrSkqXFgPzOLMOSv_FbQZKRzDxB3GxxDlnrP-iqwDU3Idl6bSx.jpg?r=a0a",
+//       title:"Netflix Original Series",
+//       links:"https://www.netflix.com/in/title/80192098",
+//   },
+//   {
+//       id: 3,
+//       sname : "LUCIFER",
+//       imgsrc : "https://occ-0-4346-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABchROhuxBgXxrs0SjhOXRm6DuZbaI3BTguhFGfiD2F6fbzG4fwSn57ppq85hZQnhw71CS-pa2laFB3SjIR1yPc7JA-e6yACW3tBlw7cKzUjUiFj65bvMbnCim5Zd3xy6DKk9Ode5lf14YBVwpxf72F3cEVJFRQ.jpg?r=714",
+//       title:"Netflix Original Series",
+//       links:"https://www.netflix.com/in/title/80057918",
+//   },
+//   {
+//       id: 4,
+//       sname : "DARK",
+//       imgsrc : "https://wallpapercave.com/wp/wp4056410.jpg",
+//       title:"Netflix Original Series",
+//       links:"https://www.netflix.com/in/title/80990668?source=35",
+//   },
+//   {
+//       id: 5,
+//       sname : "DARK",
+//       imgsrc : "https://wallpapercave.com/wp/wp4056410.jpg",
+//       title:"Netflix Original Series",
+//       links:"https://www.netflix.com/in/title/80990668?source=35",
+//   },
+//   {
+//       id: 6,
+//       sname : "DARK",
+//       imgsrc : "https://wallpapercave.com/wp/wp4056410.jpg",
+//       title:"Netflix Original Series",
+//       links:"https://www.netflix.com/in/title/80990668?source=35",
+//   },
+// ];
+
+// export default Sdata;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // index.css
+// *{
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+//   background-color: #d2dbdd;
+// }
+
+// .heading_style{
+//   padding: 30px 0;
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-size: 13px;
+//   letter-spacing: 2px;
+//   font-weight: 500;
+//   color: #868686;
+//   background-color: #fff;
+//   font-size: 1.5rem;
+//   margin-bottom: 30px;
+// }
+// .cards{
+//   width: 100%;
+//   height: auto;
+// }
+
+// .card{
+//   /* margin: 25px; */
+//   margin: 6%;
+//   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+//   background-color: #fff;
+//   width: 21.25%;
+//   border-radius: 12px;
+//   box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1);
+//   float: left;
+// }
+
+// .card:hover{
+//   box-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
+//   transform: scale(1.05, 1.05);
+// }
+
+// .card_img{
+//   width: 100%;
+//   height: 235px;
+//   border-top-left-radius: 12px;
+//   border-top-right-radius: 12px;
+// }
+
+// .card_info{
+//   background-color: #fff;
+//   border-bottom-left-radius: 12px;
+//   border-bottom-right-radius: 12px;
+//   padding: 16px 24px 24px 24px;
+//   background-color: #fff;
+// }
+
+// .card_category{
+//   text-transform: uppercase;
+//   font-style: 13px;
+//   letter-spacing: 2px;
+//   font-weight: 500;
+//   columns: #868686;
+//   background-color: #fff;
+// }
+
+// .card_title{
+//   margin-top: 5px;
+//   margin-bottom: 10px;
+//   background-color: #fff;
+//   text-transform: capitalize;
+// }
+
+// button{
+//   padding: 5px 8px;
+//   text-transform: uppercase;
+//   font-size: 13px;
+//   letter-spacing: 2px;
+//   font-weight: 500;
+//   color: #868686;
+//   background-color: #fff;
+//   outline: none;
+//   border: 1px solid black;
+//   cursor: pointer;
+// }

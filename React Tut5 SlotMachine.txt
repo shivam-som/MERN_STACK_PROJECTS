@@ -1,0 +1,347 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import App from './App';
+
+// ReactDOM.render(<App />,document.getElementById('root'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // index.css
+// *{
+//     box-sizing: border-box;
+//     padding: 0;
+//     margin: 0;
+//     background-color: #d2dbdd;
+//   }
+     
+//   .heading_style{
+//     padding: 30px 0;
+//     text-align: center;
+//     text-transform: uppercase;
+//     font-size: 13px;
+//     letter-spacing: 2px;
+//     font-weight: 500;
+//     color: #868686;
+//     background-color: #fff;
+//     font-size: 1.5rem;
+//     margin-bottom: 30px;
+//   }
+//   .cards{
+//     width: 100%;
+//     height: auto;
+//   }
+     
+//   .card{
+//     /* margin: 25px; */
+//     margin: 6%;
+//     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+//     background-color: #fff;
+//     width: 21.25%;
+//     border-radius: 12px;
+//     box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1);
+//     float: left;
+//   }
+     
+//   .card:hover{
+//     box-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
+//     transform: scale(1.05, 1.05);
+//   }
+     
+//   .card_img{
+//     width: 100%;
+//     height: 235px;
+//     border-top-left-radius: 12px;
+//     border-top-right-radius: 12px;
+//   }
+     
+//   .card_info{
+//     background-color: #fff;
+//     border-bottom-left-radius: 12px;
+//     border-bottom-right-radius: 12px;
+//     padding: 16px 24px 24px 24px;
+//     background-color: #fff;
+//   }
+     
+//   .card_category{
+//     text-transform: uppercase;
+//     font-style: 13px;
+//     letter-spacing: 2px;
+//     font-weight: 500;
+//     columns: #868686;
+//     background-color: #fff;
+//   }
+     
+//   .card_title{
+//     margin-top: 5px;
+//     margin-bottom: 10px;
+//     background-color: #fff;
+//     text-transform: capitalize;
+//   }
+     
+//   button{
+//     /* padding: 5px 8px;
+//     text-transform: uppercase;
+//     font-size: 13px;
+//     letter-spacing: 2px;
+//     font-weight: 500;
+//     color: #868686;
+//     background-color: #fff;
+//     outline: none; */
+//     padding: 15px 20px;
+//     background: #9b59b6;
+//     color: white;
+//     border: 2px solid #ecf0f1;
+//     outline: none;
+//     border-radius: 5px;
+//     text-transform: uppercase;
+//     cursor: pointer;
+//   }
+ 
+//   .slot_inner{
+//     width: 25%;
+//     margin: 0px auto;
+//     text-align: center;
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // App.jsx
+// import React from 'react';
+// import './index.css';
+// import SlotM from './SlotM';
+
+// const App = () =>{
+//     return <>
+//         <h1 className="heading_style" > 
+//             🎰 Welcome to{" "}
+//             <span style={{ fontWeight:"bold" }}> Slot machine game </span> 🎰 
+//         </h1>
+//         <div className="slotmachine">
+//             <SlotM x='😄' y='😄' z='😄' />
+//             <SlotM x='😄' y='😆' z='😄' />
+//             <SlotM x='🍎' y='🍌' z='🍎' />
+//             <SlotM x='💑' y='💑' z='💑' />
+//         </div>
+//     </>;
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // SlotM.jsx
+// import React from "react";
+// import "./index.css";
+// import SlotT from "./SlotT";
+// import SlotF from "./SlotF";
+
+// function SlotM(props) {
+//   // let x= '😄';
+//   // let y= '😄';
+//   // let z= '😎';
+
+//   // Using if-else
+//   // if((props.x===props.y) && (props.y===props.z)){
+//   //     return <SlotT x={props.x}  y={props.y} z={props.z} />
+//   // }else{
+//   //     return <SlotF x={props.x}  y={props.y} z={props.z} />
+//   // }
+
+//   // Ternary Operators
+//   return (
+//     <>
+//       {props.x === props.y && props.y === props.z ? (
+//         <SlotT x={props.x} y={props.y} z={props.z} />
+//       ) : (
+//         <SlotF x={props.x} y={props.y} z={props.z} />
+//       )}
+//     </>
+//   );
+// }
+
+// export default SlotM;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // SlotT.jsx
+// import React from 'react';
+
+// const SlotT = (props) =>{
+//     return (
+//         <>
+//             <div className="slot_inner">
+//                 <h1> {props.x} {props.y} {props.z} </h1>
+//                 <h1> This is Matching.</h1>
+//                 <hr />
+//             </div>
+//         </>
+//     );
+// };
+// export default SlotT;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // SlotF.jsx
+// import React from 'react';
+
+// const SlotF = (props) =>{
+//     return (
+//         <>
+//             <div className="slot_inner">
+//                 <h1> {props.x} {props.y} {props.z} </h1>
+//                 <h1> This is not Matching.</h1>
+//                 <hr />
+//             </div>
+//         </>
+//     );
+// };
+// export default SlotF;

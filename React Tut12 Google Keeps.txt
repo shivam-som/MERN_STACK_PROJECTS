@@ -1,0 +1,292 @@
+// // Google Keeps
+
+// import React, { useState } from "react";
+// import Header from "./Header";
+// import Footer from "./Footer";
+// import CreateNote from "./CreateNote";
+// import Note from "./Note";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// const App = () => {
+//   const [addItem, setAddItem] = useState([]);
+
+//   const addNote = (note) => {
+//     // alert("I am clicked");
+//     setAddItem((prevDataNew) => {
+//       return [...prevDataNew, note];
+//     });
+//   };
+
+//   const onDelete = (id) => {
+//     setAddItem((oldData) =>
+//       oldData.filter((currentData, indx) => {
+//         return indx !== id;
+//       })
+//     );
+//   };
+
+//   return (
+//     <>
+//       <Header />
+//       <br />
+//       <div className="container">
+//         <center>
+//           <CreateNote passNote={addNote} />
+//         </center>
+//       </div>
+
+//       {addItem.map((val, index) => {
+//         return (
+//           <Note
+//             key={index}
+//             id={index}
+//             title={val.title}
+//             content={val.content}
+//             deleteItem={onDelete}
+//           />
+//         );
+//       })}
+//       <Footer />
+//       <br />
+//     </>
+//   );
+// };
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CreateNote.jsx
+// import React, { useState } from "react";
+// import AddIcon from "@material-ui/icons/Add";
+
+// const CreateNote = (props) => {
+
+//   const [expand, setExpand] = useState(false);
+
+//   const [note, setNote] = useState({
+//     title: "",
+//     content: "",
+//   });
+
+//   const InputEvent = (event) => {
+//     const { name, value } = event.target;
+//     setNote((prevData) => {
+//       return {
+//         ...prevData,
+//         [name]: value,
+//       };
+//     });
+//   };
+
+//   const addEvent = () => {
+//     props.passNote(note);
+//     setNote({
+//       title: "",
+//       content: "",
+//     });
+//   };
+
+//   const expandIt =()=>{
+//     setExpand(true);
+//   }
+
+// const backToNormal =()=>{
+//   setExpand(false);
+// }
+
+
+//   return (
+//     <>
+//       <div className="card" style={{ width: "25%" }}>
+//         <div className="card-body">
+//         {expand ? 
+//           <input
+//             className="card-title"
+//             name="title"
+//             type="text"
+//             value={note.title}
+//             onChange={InputEvent}
+//             placeholder="Title"
+//             autoComplete="off"
+//             onDoubleClick={backToNormal}
+//           /> : null}
+//           <textarea
+//             className="card-text"
+//             name="content"
+//             rows=""
+//             value={note.content}
+//             onChange={InputEvent}
+//             column=""
+//             placeholder="Write a note..."
+//             onClick={expandIt}
+//           />
+//           {expand ? 
+//           <button onClick={addEvent} className="btn btn-warning">
+//             <AddIcon className="plus_sign" />
+//           </button> : null}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+// export default CreateNote;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Headers.jsx
+// import React from "react";
+// import logo from "./Images/logo.png";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// const Header = () => {
+//   return (
+//     <>
+//       <nav class="navbar navbar-warning bg-warning">
+//         <div class="container-fluid">
+//           <a class="navbar-brand text-white fw-bold" href="#">
+//             <img
+//               src={logo}
+//               alt=""
+//               width="50"
+//               height="50"
+//               class="d-inline-block"
+//             />
+//             Google Keeps
+//           </a>
+//         </div>
+//       </nav>
+//     </>
+//   );
+// };
+// export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Footer.jsx
+// import React from "react";
+
+// const Footer = () => {
+//   const year = new Date().getFullYear();
+
+//   return (
+//     <>
+//       <footer style={{ position: "fixed", bottom: "0" }}>
+//         <p>Copyright © {year}</p>
+//       </footer>
+//     </>
+//   );
+// };
+// export default Footer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Note.jsx
+// import React from "react";
+// import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+
+// const Note = (props) => {
+//   const deleteNote = () => {
+//     props.deleteItem(props.id);
+//   };
+
+//   return (
+//     <>
+//       <div className="card" style={{ width: "25%", float: "left" }}>
+//         <div className="card-body">
+//           <h1 className="card-title">{props.title}</h1>
+//           <p className="card-text">{props.content}</p>
+//           <button className="btn btn-success">
+//             <DeleteForeverIcon onClick={deleteNote} className="deleteIcon" />
+//           </button>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+// export default Note;
